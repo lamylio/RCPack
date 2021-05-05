@@ -1,0 +1,104 @@
+---
+# Document information
+
+title: ""
+subtitle: ""
+
+authors:
+  - "Lionel Lamy"
+  - "1294-1700"
+
+# If multiple authors: - "Lionel Lamy - 1294-1700" is prettier.
+
+# ---
+# You can remove settings below
+# Defaults values are defined
+
+logo: "resources/img/UCLouvain_Logo_Sciences.jpg"
+
+institute: "Université catholique de Louvain"
+faculty: "Louvain School of Statistics"
+# department: ""
+
+context: ""
+date: \today
+
+# ---
+colorlinks: false
+bordercolorlinks: true
+
+linkcolor: "black"
+citecolor: "blue"
+urlcolor:  "blue"
+
+linkbordercolor: "black"
+urlbordercolor: "blue"
+citebordercolor: "blue"
+
+links-as-notes: false
+# ---
+# header-includes: 
+#   -
+output:
+  pdf_document:
+    template: template/markdown.tex
+    toc: true
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  cache = TRUE,
+  echo = F,
+  eval = T,	
+  	
+  warning = F,	
+  message = F,
+  
+  	
+  out.width= "80%",
+  fig.align = "center",	
+  fig.path = "resources/figs/",
+  
+  tidy=TRUE,
+  tidy.opts=list(width.cutoff=70)
+)	
+```
+
+# Introduction
+
+```{r, appendix=TRUE}
+# hi my dude
+foo = "bar"
+rm(foo)
+```
+# Conclusion
+
+
+<!------>
+\appendix
+
+# Appendix{#appendix}
+## Figures{#figures}
+## Code{#code}
+
+<!-- Remove this part -->
+\bigskip
+\begin{note*}[about the code]
+  All the chunks with the parameter 'appendix' set to TRUE will be outputed below.  
+\end{note*}
+<!---------End---------->
+
+\bigskip
+\begin{mdframed}[style=thicc, frametitle=Note, frametitlebackgroundcolor=black!30]
+  For reproducibility purposes, the complete R project containing the source code and the results is available on https://github.com/.
+\end{mdframed}
+
+
+```{r appendix_pre}
+# remotes::install_github('yihui/formatR')
+library(formatR)
+```
+
+```{r appendix_code, eval=FALSE, echo=TRUE, ref.label=knitr::all_labels(appendix==T)}
+```

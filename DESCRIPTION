@@ -1,12 +1,13 @@
-Package: RCPack
+Package: LiochePack
 Title: Lioche - Personal R Package
-Version: 21.01.02.001
+Version: 0.0.2
 Authors@R: 
     person(given = "Lionel",
            family = "Lamy",
            role = c("aut", "cre"),
-           email = "lionel.lamy@student.uclouvain.be")
-Description: Contains some personal (useful) functions.
+           email = "contact@llamy.be")
+Description: LiochePack is a custom R package I made in order to provide some basic and maybe useful functions I might use in project. There is also a template for Rmd.
+License: MIT
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

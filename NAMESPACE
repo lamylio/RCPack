@@ -2,3 +2,12 @@
 
 export(draw_hist_boxplots)
 export(remove_ggplot_background)
+export(ts.on.sample.prediction)
+export(ts.plot.acf.pacf)
+export(ts.plot.decompose)
+export(ts.plot.ljungbox)
+export(ts.plot.n.ahead.predictions)
+export(ts.plot.superposed.ts)
+export(ts.plot.variance)
+export(ts.sarima.model.selection)
+export(ts.significance.test)
