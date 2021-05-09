@@ -3,6 +3,9 @@
 
 % DEFAULT MARDKOWN SETUP
 
+% TIGHTLIST UPDATE
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
 \RequirePackage[
 unicode=true,
 breaklinks=true,
@@ -69,7 +72,7 @@ $if(highlighting-macros)$
 \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-% 
+%
 $endif$
 
 $if(verbatim-in-note)$
@@ -130,7 +133,7 @@ $if(authors)$
 $endif$
 
 $if(logo)$
-\logo{logo}
+\logo{$logo$}
 $else$
 \logo{resources/img/UCLouvain_Logo_Sciences.jpg}
 $endif$
@@ -172,12 +175,12 @@ $endif$
     \maketitle
     $if(toc)$\tableofcontents$endif$
     \newpage
-    
+
     $for(include-before)$
         $include-before$
     $endfor$
-    
-    
+
+
     $body$
 
 
